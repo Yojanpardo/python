@@ -1,0 +1,35 @@
+tipos de datos en python
+
+int: 15 -> datos de tipo entero
+float: 14.3 -> datos de tipo punto flotante
+long: 35000000000000000000 -> datos de tipo entero pero muy grandes
+bool: True False
+string:"cadenas de texto" -> los strings pueden ser con comillas simples o dobles
+list:[1,[2,'árbol'],3] ->colección de muchas cosas de distintos tipos
+dict: {'perro':'platano':'tasty':'yum'}->diccionarios, uno ingresa una llave y devuelve un valor
+truple: (1,'string',2,'U') ->listas pero estaticas
+
+Tipos de operadores en python
+
+operadores aritmeticos +, -, *, /,%,**(elevar a la n potencia) dividir enteros entre enteros da entero y decimales entre decimales da decimales :v
+operadores lógicos and, or, not
+operadores comparadores >, <, >=, <=, ==, !=, se pueden comparar strings, listas, truples, :O 
+
+Funciones y variables.
+
+una función etiqueta una serie de instrucciones
+def nombre_de_la_funcion(parametros aquí):
+	print "aquí va la logica"
+	return "se identa de esta manera, con los espacios, no con llaves"
+
+una variable es una etiqueta de un valor o un tipo de dato
+
+
+Comentarios en python
+
+#esto es un comentario
+'''
+ésto tambien
+'''
+
+en python todo quiere ser un objeto jujujuju							
