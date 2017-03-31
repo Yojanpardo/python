@@ -13,7 +13,7 @@ Tipos de operadores en python
 
 operadores aritmeticos +, -, *, /,%,**(elevar a la n potencia) dividir enteros entre enteros da entero y decimales entre decimales da decimales :v
 operadores lógicos and, or, not
-operadores comparadores >, <, >=, <=, ==, !=, se pueden comparar strings, listas, truples, :O 
+operadores comparadores >, <, >=, <=, ==, !=, se pueden comparar strings, listas, truples, :O
 
 Funciones y variables.
 
@@ -32,4 +32,10 @@ Comentarios en python
 ésto tambien
 '''
 
-en python todo quiere ser un objeto jujujuju							
+en python todo quiere ser un objeto jujujuju
+
+para saber como funciona algo en python utilizamos dir("aqui dentro va el nombre del objeto que queremos saber como funciona")
+
+podemos importar cosas especificas de las diferentes librerias de python de la siguiente manera:
+from dateutil.relativedelta import relativedelta
+existen modulos como "dateutil" que no están instalados por defecto, debemos instalarlos nosotros de forma manual con pip
