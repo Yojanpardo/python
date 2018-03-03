@@ -34,3 +34,19 @@ def suma(numero1,numero2):
 * no puede ser un keyword
 * deben tener nombres diferentes entre si 
 ##### Funciones con parámetros
+
+#### Estructuras condicionales en python
+en un programa no solo necesitamos hacer operaciones, tambien debemos tomar decisiones a partir de lo que vamos sabiendo, por eso existen las estructuras condicionales y para ello utilizamos los operadores relacionales y logicos 
+
+###### Operadores relacionales
+* ==
+* !=
+* <
+* >
+* <=
+* >=
+
+###### Operadores lógicos 
+* Or
+* And
+* Not
