@@ -50,3 +50,8 @@ en un programa no solo necesitamos hacer operaciones, tambien debemos tomar deci
 * Or
 * And
 * Not
+
+#### El zen de python
+~~~ p
+ĩmport this
+~~~
