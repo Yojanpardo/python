@@ -117,3 +117,21 @@ x[1:3] #no se cuenta la ultia posición
 x[1:6:2] #el ultimo es el intervalo en el cual queremos que salte
 x[::-1] #le da la vuelta a un string
 x[start:end:hops]
+#### Iteraciones 
+* permite realiza la misma secuencia de pasos varias veces
+* permite recorrer una secuencia (como un string)
+* es una herramienta clave de cualquier programador 
+
+##### Range
+~~~ py 
+range(x) #imprime una secuencia de x numeros
+~~~
+
+#### Ciclos for con python
+Es un ciclo iterativo que nos pertime ejecutar x cantidad de veces ciertas lineas de codigo
+
+~~~ py
+for i in range(5):
+	print(i)
+~~~
+
