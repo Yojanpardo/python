@@ -141,3 +141,31 @@ Ejecuta una operacion siempre y cuando una condicion sea verdadera
 while x=1:
 	instrucciones aquí
 ~~~
+
+#### Listas
+* Es una secuencia de elementos
+* Cuando se asigna a una variable, permite agrupar varios elementos en un solo lugar
+* Se crean con los corchetes [] o con la funcion list()
+```py
+productos=['papas','salsa de tomate','pollo frito']
+precios=[1000,1500,15000]
+```
+
+* Las listas son mutables
+```py
+productos[0]='zanahorias'
+```
+
+* Se puede acceder a un elemento de una lista con su idice
+
+##### Operaciones con listas
+
+* al sumar dos listas, éstas se concatenan
+* al multiplicarlas, éstas se multiplican la cantidad de veces que le pusimos
+* se pueden trabajar con los slices
+* son modificables utilizando su indice y el operador de asignación 
+* se pueden ordenar con la funcion sort()
+* se puede extraer un elemento de una lista y asignarlo a una variable con la funcion pop()
+* pueden extender de otra lista con el metodo extend([list_name])
+* podemos eliminar elementos con el keyward  del [list_name[position]]
+* podemos convertir un string en una lista haciendo uso de la función list([string]) y ésto deconstruye un string, dejandolo letra por letra, podria ser util para un jugo de ahorcado
