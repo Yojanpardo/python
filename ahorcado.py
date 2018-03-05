@@ -73,7 +73,7 @@ WORDS =[
   'guardia',
   'condones',
   'gato',
-  'programación',
+  'programacion',
   'smartphone',
 ]
 
@@ -88,7 +88,7 @@ def show_board(hidden_word,tries):
 
 
 def main():
-    word=random_word()
+    word=list(random_word())
     hidden_word = ['-']*len(word)
     tries=0
 
@@ -102,10 +102,20 @@ def main():
             if word[letter]==current_letter:
                 letter_found = True
                 hidden_word[letter]=current_letter
-        
+            
+        print(hidden_word)    
+        if word==hidden_word:
+            print('G A N A S T E!!')
+            print('Felicidades, eres el mejor del mundo mundial!! :3 ')
+            break
+
+
         if not letter_found:
             tries+=1
-        
+            if tries ==7:
+                print('P E R D I S T E!!')
+                print('La palabra era: {}'.format(word))
+                break
 
 
 if __name__ == '__main__':
