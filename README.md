@@ -135,3 +135,9 @@ for i in range(5):
 	print(i)
 ~~~
 
+#### Ciclos while con python
+Ejecuta una operacion siempre y cuando una condicion sea verdadera
+~~~ py
+while x=1:
+	instrucciones aquí
+~~~
