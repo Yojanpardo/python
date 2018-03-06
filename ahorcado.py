@@ -2,6 +2,7 @@
 # las constantes se definen en mayusculas solo por buenas práctias
 
 import random
+import getpass
 
 IMAGES = ['''
   +---+
@@ -95,12 +96,12 @@ def main():
     if option == 1:
         word=list(random_word())
     elif option == 2:
-        word=list(raw_input('ingresa la palabra:\n'))
+        word=list(getpass.getpass('ingresa la palabra:\n'))
     else: 
         print('Pon una opción de verdad')
 
     hidden_word = [' ___ ']*len(word)
-    hidden_word_aux = [' ___ ']*len(word)
+    hidden_word_aux = ['']*len(word)
 
     while True:
         print('\n\n\n')
