@@ -169,3 +169,5 @@ productos[0]='zanahorias'
 * pueden extender de otra lista con el metodo extend([list_name])
 * podemos eliminar elementos con el keyward  del [list_name[position]]
 * podemos convertir un string en una lista haciendo uso de la función list([string]) y ésto deconstruye un string, dejandolo letra por letra, podria ser util para un juego de ahorcado
+
+#### Busquedas binarias
