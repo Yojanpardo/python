@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 # las constantes se definen en mayusculas solo por buenas práctias
 
-import random
-import getpass
+import random, getpass
 
 IMAGES = ['''
   +---+
@@ -88,21 +87,28 @@ def show_board(hidden_word,tries):
     hidden_word_text=''.join(hidden_word)
     print(hidden_word_text)
 
-def select(option):    
+def select(option):
     if option == 1:
         word=list(random_word())
     elif option == 2:
-        word=getpass.getpass('ingresa la palabra:\n').lower()
+        word=''
+        while not word.isalpha():
+            word=getpass.getpass('ingresa la palabra:\n').lower()
+            if not word.isalpha():
+                print('''Ingresaste una palabra con caracteres no alfabeticos (puntos, comas, espacios, etc).
+
+Por favor ingresa una sola palabra con caracteres alfabeticos.''')
         word=list(word)
     else: 
         print('Pon una opción de verdad')
+        main()
 
     return word
 
 def jugar_de_nuevo():
     jugar_de_nuevo='quizá'
     while jugar_de_nuevo!='si' or jugar_de_nuevo!='no':
-        jugar_de_nuevo=str(raw_input('Quieres volver a jugar? \nResponde: si o no. \n')).lower()
+        jugar_de_nuevo=str(input('Quieres volver a jugar? \nResponde: si o no. \n')).lower()
         if jugar_de_nuevo=='si':
             main()
         elif jugar_de_nuevo=='no':
@@ -168,14 +174,14 @@ def play(tries,letter_try,word,hidden_word):
         show_board(hidden_word,tries)
         print('\n\n')
         current_letter=''
-        while len(current_letter) != 1 or current_letter==' ':
-            current_letter = str(raw_input('con que letra quieres probar?\n')).lower()
-            if current_letter ==' ':
-                print('No se admiten espacios.\n Intenta de nuevo.\n')
+        while len(current_letter) != 1 or not current_letter.isalpha():
+            current_letter = str(input('con que letra quieres probar?\n')).lower()
+            if not current_letter.isalpha():
+                print('No se admiten caracteres no alfabeticos ni espacios.\n Intenta de nuevo.\n')
             elif len(current_letter) < 1:
-                print('No se admiten espacios vacíos')
+                print('Por favor digita una letra.\n')
             else:
-                print('No se admite más de una letra')
+                print('No se admite más de una letra.\n')
 
         letter_found = False
         
@@ -198,17 +204,18 @@ def play(tries,letter_try,word,hidden_word):
 
 
 def main():
-    option=int(raw_input('escoge una opción:\n1. Una palabra aleatoria del sistema.\n2. Ingresa una palabra.\n'))
+    try:
+        option=int(input('escoge una opción:\n1. Una palabra aleatoria del sistema.\n2. Ingresa una palabra.\n'))
+    except ValueError:
+        print('ingresaste una leta, pendejo!\n\nPor favor ingresa el valor numerico de la opción\n\n')
+        main()
+
     tries=0
     letter_try = list()
     word=select(option)
 
     hidden_word = [' ___ ']*len(word)
-    for space in range(len(word)):
-        if word[space] == ' ':
-            print('Hemos detectado que igresaste más de una palabra separada por espacios.\nLos espacios serán reemplazados por "--".')
-            hidden_word[space]=' -- '
-
+    
     play(tries,letter_try,word,hidden_word)
 
 if __name__ == '__main__':
