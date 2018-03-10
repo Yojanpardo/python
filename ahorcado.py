@@ -2,72 +2,81 @@
 # las constantes se definen en mayusculas solo por buenas práctias
 
 import random, getpass
+import os
 
 IMAGES = ['''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-  |   |
- /    |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-  |   |
- / \  |
-      |
-=========''']
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+          |
+          |
+          |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+      |   |
+          |
+          |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+     /|   |
+      |   |
+          |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+     /|\  |
+      |   |
+          |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+     /|\  |
+      |   |
+     /    |
+          |
+    =========
+''', '''
+      +---+
+      |   |
+      O   |
+     /|\  |
+      |   |
+     / \  |
+          |
+    =========
+''']
 
 WORDS =[
   'guardia',
@@ -110,6 +119,16 @@ def jugar_de_nuevo():
     while jugar_de_nuevo!='si' or jugar_de_nuevo!='no':
         jugar_de_nuevo=str(input('Quieres volver a jugar? \nResponde: si o no. \n')).lower()
         if jugar_de_nuevo=='si':
+            clear()
+            print("""
+                  ______  __  __  _____   ____    ____      ______  ____    _____       
+                 /\  _  \/\ \/\ \/\  __`\/\  _`\ /\  _`\.  /\  _  \/\  _`\ /\  __`\     
+                 \ \ \L\ \ \ \_\ \ \ \/\ \ \ \L\ \ \ \/\_\ \ \ \L\ \ \ \/\ \ \ \/\ \    
+                  \ \  __ \ \  _  \ \ \ \ \ \ ,  /\ \ \/_/_ \ \  __ \ \ \ \ \ \ \ \ \    
+                   \ \ \/\ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \L\ \ \ \ \/\ \ \ \_\ \ \_\ \  
+                    \ \_\ \_\ \_\ \_\ \_____\ \_\ \_\ \____/  \ \_\ \_\ \____/\ \_____\ 
+                     \/_/\/_/\/_/\/_/\/_____/\/_/\/ /\/___/    \/_/\/_/\/___/  \/_____/ 
+              """)
             main()
         elif jugar_de_nuevo=='no':
             exit()
@@ -165,7 +184,7 @@ def ganaste(hidden_word):
             """)
         print('\n\n\nFelicidades, eres el mejor del mundo mundial!! :3 \n\n')
         hidden_word_text=''.join(hidden_word).replace(' ','')
-        print('la palabra es:    {}\n'.format(hidden_word_text))
+        print('la palabra es:\t{}\n'.format(hidden_word_text))
         jugar_de_nuevo()
 
 def play(tries,letter_try,word,hidden_word):
@@ -175,13 +194,12 @@ def play(tries,letter_try,word,hidden_word):
         print('\n\n')
         current_letter=''
         while len(current_letter) != 1 or not current_letter.isalpha():
-            current_letter = str(input('con que letra quieres probar?\n')).lower()
+            current_letter = str(input('Con que letra quieres probar?\n')).lower()
+            clear()
             if not current_letter.isalpha():
                 print('No se admiten caracteres no alfabeticos ni espacios.\n Intenta de nuevo.\n')
             elif len(current_letter) < 1:
                 print('Por favor digita una letra.\n')
-            else:
-                print('No se admite más de una letra.\n')
 
         letter_found = False
         
@@ -189,6 +207,12 @@ def play(tries,letter_try,word,hidden_word):
             if word[letter]==current_letter:
                 letter_found = True
                 hidden_word[letter]='  '+current_letter+'  '
+        
+        if letter_found:
+          print("Excelente, sigue asi :)\t\t\t\t\tVas {} intento(s) de 7".format(tries+1))
+        else:
+          print("Pesimo, intenta otra vez ¬¬\t\t\t\tVas {} intento(s) de 7".format(tries+1))
+
 
         word_text = ''.join(word)
         
@@ -203,11 +227,17 @@ def play(tries,letter_try,word,hidden_word):
         print(letter_try)
 
 
+def clear(): #Funcion para limpiar las diferentes pantallas
+    if os.name == "nt": # Windows
+        os.system("cls")
+    elif os.name == "posix": # Linux / Mac
+        os.system("clear")
+
 def main():
     try:
         option=int(input('escoge una opción:\n1. Una palabra aleatoria del sistema.\n2. Ingresa una palabra.\n'))
     except ValueError:
-        print('ingresaste una leta, pendejo!\n\nPor favor ingresa el valor numerico de la opción\n\n')
+        print('ingresaste una letra, pendejo!\n\nPor favor ingresa el valor numerico de la opción\n\n')
         main()
 
     tries=0
