@@ -171,3 +171,28 @@ productos[0]='zanahorias'
 * podemos convertir un string en una lista haciendo uso de la función list([string]) y ésto deconstruye un string, dejandolo letra por letra, podria ser util para un juego de ahorcado
 
 #### Busquedas binarias
+Que es una busqueda binaria?
+Es una forma eficiente de encontrar un valor dentro de una lista ordenada
+ 
+#### Diccionarios
+* es un mapa de llaves a valores. Los valores pueden ser de cualquier tipo
+* Se crea con llaves {} o con el keyword dict
+* Se añaden elementos al diccionario señalando la llave y el valor
+~~~py
+my_dict['llave']='valor'
+#tambien se pueden añadir valores al momento de inicializarlo
+my_dict{'llave':'valor'}
+~~~
+* Se puede iterar en un Diccionario para obtener las llaves, los valores o los dos al tiempo
+~~~py
+for llave in diccionario:
+...
+for llave in diccionario.keys():
+...
+for valo in diccionario.values():
+...
+for llave, valor in diccionario.iteritems():#en python2.x
+...
+for llave, valor in diccionario.items():#en python 3.x
+...
+~~~
