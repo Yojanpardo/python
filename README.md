@@ -196,3 +196,12 @@ for llave, valor in diccionario.iteritems():#en python2.x
 for llave, valor in diccionario.items():#en python 3.x
 ...
 ~~~
+
+#### Tuplas
+* son similares a las listas y son una secuencia de valores indexada por enteros
+* a diferencia de las listas, las tuplas son inmutables. para modificarla hay que crear otra
+* se separan los valores con comas, es una practica común encerrar los valores en parentesis
+* se pueden utilizar para devolver mas de un valor en una función o crear estructuras de datos ligeras.
+~~~py
+mi_tupla=(1,2,3,4)
+~~~
