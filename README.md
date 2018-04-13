@@ -5,15 +5,15 @@ veamos por qué deeriamos escoer python como lenguaje de programación:
 * tiene una sintaxis bastante legible
 * es facil de aprender
 
-#### Turtle
+## Turtle
 turtle es un modulo de python que nos sirve para generar programas graficos y es una forma sencilla de ver y dar insrucciones.
 
-#### Operadores en python
+## Operadores en python
 * Operadores aritméticos
 * Operadores Lógicos
 * Operadores comparativos
 
-#### Orden de las operaciones
+## Orden de las operaciones
 * PEMDAS
 * Parentesis
 * Exponentes
@@ -22,36 +22,36 @@ turtle es un modulo de python que nos sirve para generar programas graficos y es
 * Adicion
 * Sustracción
 
-#### Funciones en python
+## Funciones en python
 son una secuencia de comandos que se pueden ordenar por nombres
 se definen don la palabra reservada def
 ``` p
 def suma(numero1,numero2):
 	return numero1+numero2
 ```
-##### Limites de las funciones
+### Limites de las funciones
 * no pueden empezar con un digito
 * no puede ser un keyword
 * deben tener nombres diferentes entre si
-##### Funciones con parámetros
+### Funciones con parámetros
 
-#### Estructuras condicionales en python
+## Estructuras condicionales en python
 en un programa no solo necesitamos hacer operaciones, tambien debemos tomar decisiones a partir de lo que vamos sabiendo, por eso existen las estructuras condicionales y para ello utilizamos los operadores relacionales y logicos
 
-###### Operadores relacionales
-* ==
-* !=
-* <
-* >
-* <=
-* >=
+#### Operadores relacionales
+* Igual que: '=='
+* Diferente que: '!='
+* Menor que: '<'
+* Mayor que: '>'
+* Menor o igual que: '<='
+* Mayor o igual que: '>='
 
-###### Operadores lógicos
+#### Operadores lógicos
 * Or
 * And
 * Not
 
-#### El zen de python
+## El zen de python
 ~~~ p
 ĩmport this
 ~~~
@@ -75,7 +75,7 @@ Aunque “nunca” es a menudo mejor que “ahora mismo”.
 Si la aplicación es difícil de explicar, es una mala idea.
 Si la aplicación es fácil de explicar, puede ser una buena idea.
 Los espacios de nombres son una gran idea ¡hay que hacer más de eso!
-#### Comparación de Strings
+## Comparación de Strings
 los strings son inmutables, no se pueden modificar y si se quiere cambiar hay que crear uno nuevo
 
 ~~~ py
@@ -85,20 +85,20 @@ r = 'l' + a[1:]
 
 * Los String se pueden comparar haciendo uso de los operadores relacionales
 
-#### ASCII vs UNICODE
+## ASCII vs UNICODE
 * Ambos son codigos de caracteres
 * ASCII (american standar code for information interchange)
 * UNICODE incluye la mayoria de los alfabetos del mundo
 
 python 2 maneja por defecto la codificacion ASCII y python 3 ya lo hace con UNICODE.
 
-#### Recursión
+## Recursión
 hace referencia a una funcion que se llama a si misma
 
-#### Manejo de strings
+## Manejo de strings
 La función len nos permite saber la longitud de un string
 
-##### Metodos de string
+### Metodos de string
 ~~~ py
 my_string = 'La Wea cuatica'
 my_string.upper() #lo pone todo en mayus
@@ -106,7 +106,7 @@ my_string.lower() # lo pone todo en minusculas
 my_string.find('W') #busca el indice de la letra ingresada
 ~~~
 
-#### Slices
+## Slices
 * se pueden obtener sud-strings utilizando la notacion en slices
 * se definen los rangos que se requieren y los sltos necesarios
 ~~~ py
@@ -127,7 +127,7 @@ x[start:end:hops]
 range(x) #imprime una secuencia de x numeros
 ~~~
 
-#### Ciclos for con python
+## Ciclos for con python
 Es un ciclo iterativo que nos pertime ejecutar x cantidad de veces ciertas lineas de codigo
 
 ~~~ py
@@ -135,14 +135,14 @@ for i in range(5):
 	print(i)
 ~~~
 
-#### Ciclos while con python
+## Ciclos while con python
 Ejecuta una operacion siempre y cuando una condicion sea verdadera
 ~~~ py
 while x=1:
 	instrucciones aquí
 ~~~
 
-#### Listas
+## Listas
 * Es una secuencia de elementos
 * Cuando se asigna a una variable, permite agrupar varios elementos en un solo lugar
 * Se crean con los corchetes [] o con la funcion list()
@@ -158,7 +158,7 @@ productos[0]='zanahorias'
 
 * Se puede acceder a un elemento de una lista con su idice
 
-##### Operaciones con listas
+### Operaciones con listas
 
 * al sumar dos listas, éstas se concatenan
 * al multiplicarlas, éstas se multiplican la cantidad de veces que le pusimos
@@ -170,11 +170,11 @@ productos[0]='zanahorias'
 * podemos eliminar elementos con el keyward  del [list_name[position]]
 * podemos convertir un string en una lista haciendo uso de la función list([string]) y ésto deconstruye un string, dejandolo letra por letra, podria ser util para un juego de ahorcado
 
-#### Busquedas binarias
+## Busquedas binarias
 Que es una busqueda binaria?
 Es una forma eficiente de encontrar un valor dentro de una lista ordenada
 
-#### Diccionarios
+## Diccionarios
 * es un mapa de llaves a valores. Los valores pueden ser de cualquier tipo
 * Se crea con llaves {} o con el keyword dict
 * Se añaden elementos al diccionario señalando la llave y el valor
@@ -197,7 +197,7 @@ for llave, valor in diccionario.items():#en python 3.x
 ...
 ~~~
 
-#### Tuplas
+## Tuplas
 * son similares a las listas y son una secuencia de valores indexada por enteros
 * a diferencia de las listas, las tuplas son inmutables. para modificarla hay que crear otra
 * se separan los valores con comas, es una practica común encerrar los valores en parentesis
@@ -206,7 +206,7 @@ for llave, valor in diccionario.items():#en python 3.x
 mi_tupla=(1,2,3,4)
 ~~~
 
-#### Sets en python
+## Sets en python
 son similares a las listas pero no permiten elementos repetidos.
 
 Se pueden realizar tres operaciones basicas con los sets, entre las cuales encontramos:
@@ -215,7 +215,7 @@ Se pueden realizar tres operaciones basicas con los sets, entre las cuales encon
 * Intersección
 * Diferencia
 
-###### Declaración
+### Declaración
 ~~~ py
 >>> s = set([1,2,3])
 >>> t = set([3,4,5])
@@ -235,12 +235,12 @@ False
 
 Es mas facil hacer operaciones con sets que con listas.
 
-###### Qué casos de uso pueden existir para los sets?
+### Qué casos de uso pueden existir para los sets?
 
-#### Dictionary comprehension - List comprehension
+## Dictionary comprehension - List comprehension
 Nos permiten expresar construcciones de forma mas sencilla y comprensible.
 
-##### List comprehension
+### List comprehension
 convierte una secuencia existente en una nueva secuencia y su resultado es una nueva lista
 
 ~~~py
@@ -258,7 +258,7 @@ convierte una secuencia existente en una nueva secuencia y su resultado es una n
 [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
 ~~~
 
-##### Dictionary comprehension
+### Dictionary comprehension
 Es lo mismo que un list comprehension pero hace las operaciones con diccionarios
 
 ~~~py
@@ -274,7 +274,7 @@ Es lo mismo que un list comprehension pero hace las operaciones con diccionarios
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
 ~~~
 
-#### Manejo de erroes en python
+## Manejo de erroes en python
 Muchas veces en nuestra programación ocurren errores y debido a estos errores nuestro programa se va a cerrar, nosotros sabemos como se comporta el programa y debemos generar las excepciones para estos errores, muchas veces para hacer validaciones.
 Los errores en python tienen una gerarquia y hay que revisarlos buscando en google.
 a partir de los errores le damos un manejo diferente a cada una.
