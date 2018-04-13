@@ -278,4 +278,4 @@ Es lo mismo que un list comprehension pero hace las operaciones con diccionarios
 Muchas veces en nuestra programación ocurren errores y debido a estos errores nuestro programa se va a cerrar, nosotros sabemos como se comporta el programa y debemos generar las excepciones para estos errores, muchas veces para hacer validaciones.
 Los errores en python tienen una gerarquia y hay que revisarlos buscando en google.
 a partir de los errores le damos un manejo diferente a cada una.
-[Gerarquía de errores](https://docs.python.org/3.5/reference/compound_stmts.html#try)
+Aquí dejo un enlace hacia la [Gerarquía de errores](https://docs.python.org/3.5/reference/compound_stmts.html#try) de python haciendo clic en el enlace
