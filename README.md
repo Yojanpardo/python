@@ -279,3 +279,23 @@ Muchas veces en nuestra programación ocurren errores y debido a estos errores n
 Los errores en python tienen una gerarquia y hay que revisarlos buscando en google.
 a partir de los errores le damos un manejo diferente a cada una.
 Aquí dejo un enlace hacia la [Gerarquía de errores](https://docs.python.org/3.5/reference/compound_stmts.html#try) de python haciendo clic en el enlace
+## Manejo de archivos en python
+A la hora de abrir y modificar archivos con python es importante manejarlos con mucho cuidado porque todo se puede borrar e irse a la mierda :c
+* Python puede leer y ecrivir archivos con la funcion __open__
+* la funcion open regresa un objeto archivo (file)
+* los archivos pueden ser de texto o binarios
+* se tiene que especificar el modo en que se maneja el archivo.
+		* 'r' = read
+		* 'w' = write
+		* 'a' = append
+		* 'r+' = read and write
+* se debe cerrar el archivo con el metodo __close__
+* la mejor manera de manejar archivos es con el keyword __with__.
+* siempre hay que cerrar los archivos y para eso lo hacemos con with
+
+así sería la estructura para leer un archivo en python, para escribirlo podemos cambiar la r por la w.
+~~~py
+with open('file.txt', 'r') as f:
+    for line in f:
+				print(line)
+~~~
