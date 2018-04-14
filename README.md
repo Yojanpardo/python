@@ -309,3 +309,7 @@ with open('file.txt', 'r') as f:
 * las funciones que viven dentro de los objetos son los llamados metodos
 * al igual que las variables los metodos privados se inician con un guin bajo
 * metodos estaticos, de clase, de instancia, getters y setters
+## Decoradores en python
+* es una funcion que recibe como parametro una funcion y regresa otra función.
+* Un decorador se aplica a una funcion o metodo con el @
+* util para definir si una funcion debe ejecutarse o no.
