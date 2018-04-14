@@ -58,10 +58,13 @@ def main():
         command = str(input('''
 
 
-                Escribe un comando
-                [p]render
-                [a]pagar
-                [s]alir
+
+Escribe un comando
+[p]render
+[a]pagar
+[s]alir
+
+
 '''))
         if command == 'p':
             lamp.turn_on()
