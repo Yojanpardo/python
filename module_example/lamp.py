@@ -50,27 +50,3 @@ class Lamp:
             print(self._LAMPS[0])
         else:
             print(self._LAMPS[1])
-
-def main():
-    lamp = Lamp(_is_turned_on=False)
-
-    while True:
-        command = str(input('''
-
-
-
-Escribe un comando
-[p]render
-[a]pagar
-[s]alir
-
-
-'''))
-        if command == 'p':
-            lamp.turn_on()
-        elif command == 'a':
-            lamp.turn_off()
-        else:
-            exit()
-if __name__ == '__main__':
-    main()

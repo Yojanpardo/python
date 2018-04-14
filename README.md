@@ -313,3 +313,5 @@ with open('file.txt', 'r') as f:
 * es una funcion que recibe como parametro una funcion y regresa otra función.
 * Un decorador se aplica a una funcion o metodo con el @
 * util para definir si una funcion debe ejecutarse o no.
+## Paquetes y modulos
+* nos permite hacer programas extensos sin necesidad de tener muchisimas lineas de codigo en nuestro archivo de texto 
