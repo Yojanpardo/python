@@ -299,3 +299,13 @@ with open('file.txt', 'r') as f:
     for line in f:
 				print(line)
 ~~~
+## Programación orientada a objetos
+* permite definir tipos propios
+* permite manejar datos y logica en un solo contenedor
+* Las lases son como fabricas (moldes ) para crear otros objetos
+* __isinstance__ y __hasatr__
+* Las variables privadas (que viven dentro de las clases) se inician con un guion bajo.
+### Clases y metodos
+* las funciones que viven dentro de los objetos son los llamados metodos
+* al igual que las variables los metodos privados se inician con un guin bajo
+* metodos estaticos, de clase, de instancia, getters y setters
