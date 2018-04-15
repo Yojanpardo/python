@@ -314,4 +314,27 @@ with open('file.txt', 'r') as f:
 * Un decorador se aplica a una funcion o metodo con el @
 * util para definir si una funcion debe ejecutarse o no.
 ## Paquetes y modulos
-* nos permite hacer programas extensos sin necesidad de tener muchisimas lineas de codigo en nuestro archivo de texto 
+* nos permite hacer programas extensos sin necesidad de tener muchisimas lineas de codigo en nuestro archivo de texto
+## Paquetes de terceros.
+Lo mejor de programar es que muchas veces no vamos a escribir el codigo que vamos a utilizar, casi siempre vamos a utilizar paquetes ya existentes y para elo necesitamos utilizar el manejador de paquete de python (pip)
+### Ambientes o entornos virtuales.
+muchas veces tenemos proyectos que utilizan diferentes versiones de los paquetes. para ello creamos un entorno virtual y ahi vamos a instalar nuestros paquetes en la version que lo necesitamos.
+#### Como instalar pip?
+En Ubuntu
+~~~
+$ sudo apt install python-pip
+~~~
+vamos a instalar virtualenv
+~~~
+$ pip install virtualenv
+~~~
+para encender un entorno virtual lu hacemos de la siguiente manera
+~~~
+$ virtualenv [nombre del entorno]
+~~~
+### Flask
+es un framework sencillo para poder hacer aplicaciones web.
+
+~~~
+pip install flask
+~~~
