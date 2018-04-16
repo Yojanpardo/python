@@ -338,3 +338,8 @@ es un framework sencillo para poder hacer aplicaciones web.
 ~~~
 pip install flask
 ~~~
+## Web scraping
+nos permite automatizar el proceso de busqueda en los sitios web y almacenarlos en una base de datos.
+para este caso vamos a hacer un web scraping a un sitio web para descargar unas imagenes.
+lo voy a hacer en otro proyecto.
+[aqui el enlace](https://github.com/Yojanpardo/web_scraper)
