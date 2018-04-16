@@ -44,6 +44,24 @@ class ContactBook:
 
         input('Presiona enter para continuar')
 
+    def modify(self, name):
+        for contact in self._contacts:
+            if contact.name.lower()==name.lower():
+                self._print_contact(contact)
+                new_name = str(input('\n\n\nIngresa el nuevo nombre del contacto:\n'))
+                new_phone = str(input('Ingresa el nuevo número telefónico del contacto:\n'))
+                new_email = str(input('Ingresa el nuevo email del contacto:\n'))
+
+                self._update_contact(contact, new_name, new_phone, new_email, name)
+
+                break
+        else:
+            self._not_found()
+
+    def _update_contact(self, contact, new_name, new_phone, new_email, old_name):
+        self.delete(old_name)
+        self.add(new_name, new_phone, new_email)
+
     def _not_found(self):
         print('''
 ******
@@ -74,6 +92,7 @@ Qué deseas hacer?
 '''))
         except ValueError:
             print('Por favor ingresa un numero de la lista')
+            input('Presiona enter para continuar')
             return main()
 
         if command == 1:
@@ -84,7 +103,8 @@ Qué deseas hacer?
             contact_book.add(name, phone, email)
 
         elif command == 2:
-            print('Actualizar contacto:\n')
+            name = str(input('ingresa el nombre del contacto que desas actualizar:\n'))
+            contact_book.modify(name)
 
         elif command == 3:
             name = str(input('ingresa el nombre del contacto que desas buscar:\n'))
