@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import csv
 
 class Contact:
 
@@ -15,6 +16,7 @@ class ContactBook:
     def add(self, name, phone, email):
         contact = Contact(name, phone, email)
         self._contacts.append(contact)
+        self._save()
 
     def show_all(self):
         for contact in self._contacts:
@@ -32,6 +34,9 @@ class ContactBook:
             if contact.name.lower() == name.lower():
                 del self._contacts[idx]
                 break
+
+        self._save()
+
         input('\nPresiona enter para continuar\n')
 
     def search(self, name):
@@ -58,9 +63,18 @@ class ContactBook:
         else:
             self._not_found()
 
+    def _save(self):
+        with open('contacts.csv', 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow( ('name', 'phone', 'email') )
+
+            for contact in self._contacts:
+                writer.writerow( (contact.name, contact.phone, contact.email) )
+
     def _update_contact(self, contact, new_name, new_phone, new_email, old_name):
         self.delete(old_name)
         self.add(new_name, new_phone, new_email)
+        self.save()
 
     def _not_found(self):
         print('''
@@ -75,6 +89,17 @@ Contact not found
 def main():
 
     contact_book = ContactBook()
+
+    with open('contacts.csv', 'r', encoding='utf-8') as f:
+
+        reader = csv.reader(f)
+        for idx, row in enumerate(reader):
+            if idx == 0:
+                continue
+            if row ==[]:
+                continue
+            else:
+                contact_book.add(row[0], row[1], row[2])
 
     while True:
         try:
